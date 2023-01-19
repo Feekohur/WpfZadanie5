@@ -1,0 +1,51 @@
+﻿<Window x:Class="WpfZadanie5.AddandEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfZadanie5"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        Title="AddandEditWindow" Height="250" Width="600" FontSize="18">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Tytuł filmu: </Label>
+            <TextBox Grid.Column="1" Margin="5" Name="tyt" VerticalContentAlignment="Center"></TextBox>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Data premiery:</Label>
+            <DatePicker Grid.Column="1" Margin="5" Name="dat" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></DatePicker>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Opis:</Label>
+            <TextBox Grid.Column="1" Margin="5" Name="opi" VerticalContentAlignment="Center"></TextBox>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="6*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="1" Margin="5" Click="Button_Click">Ok</Button>
+            <Button Grid.Column="2" Margin="5" Click="Button_Click_1">Anuluj</Button>
+        </Grid>
+    </Grid>
+</Window>
